@@ -1,0 +1,37 @@
+/*HEADER*/
+.topo {
+   background-color: var(--color-azul-claro);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 136px;
+   font-family: var(--font-bold);
+   font-size: 3rem;
+}
+
+.topo__Marca{
+    color: var(--color-preto);
+}
+
+.topo__titulo {
+    color: var(--color-azul-escuro);
+    padding-left: 8px;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 104px;
+    font-size: 1rem;
+    background-color: var(--color-azul-claro);
+    height: 144px;
+    font-family: var(--font-regular);
+    line-height: 24px;
+
+}
+
+.footer__icones {
+    font-size: 1.25rem;
+}
