@@ -1,4 +1,17 @@
-
+/*Geral*/
+.modal__text {
+    font-size: 1rem;
+    font-family: var(--font-regular);
+}
+.text-bold{
+    font-family: var(--font-bold);
+    font-size: 1.25rem;
+}
+.text-uc {
+    font-family: var(--font-regular);
+    text-transform: uppercase;
+    font-size: 1rem;
+}
 
 /*HEADER*/
 .topo {
@@ -98,17 +111,17 @@
 .modal {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 46px;
     border-radius: 25px;
-    background-color: teal;
-    width: 1048px;
+    background-color: yellow;
+    width: 850px;
     padding: 59px 50px;
 }
 
 .modal__img {
-    width: 328px;
+    width: 328  px;
 }
-
 .modal__details {
     display: flex;
     flex-direction: column;
@@ -116,31 +129,84 @@
     padding: 0 16px;
 }
 
-.modal__amount-price-area {
-    display: flex;
-}
-
 .modal__title {
     font-size: 2rem;
     font-family: var(--font-bold);
+}
+.modal__description {
+    line-height: 24px;
 }
 
 .modal__option-area {
     background-color: var(--color-cinza-claro);
     border-radius: 16px;
-    padding: 8px;
+    overflow: hidden;
 }
 
-.modal__text {
-    font-size: 1rem;
+.modal__option-area button{
+    padding: 12px 16px;
+}
+.modal__option-area button:hover {
+    background-color: var(--color-azul-escuro);
+}
+
+
+.modal__amount-price-area {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
+
+.modal__amount-price {
+    font-family: var(--font-light);
+    font-size: 1.5rem;
+}
+
+.modal__unit-control{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-family: var(--font-regular);
+    font-size: 1rem;
+    background-color: #EEE;
+    border-radius: 8px;
+    gap: 8px;
+    overflow: hidden;
 }
 
-.text-bold{
-    font-family: var(--font-bold);
+.modal__unit-control button {
+    padding: 0.6rem 0.8rem;
+}
+.modal__unit-control button:hover {
+    background-color: var(--color-cinza-escuro);
+}
+
+.modal__btn-area{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.btn__green-btn {
     font-size: 1.25rem;
+    font-family: var(--font-regular);
+    color: #E5F4FF;
+    background-color: #48d05f;
+    padding: 8px 16px;
+    border-radius: 1rem;
+}
+.btn__green-btn:hover{
+    background-color: var(--color-sucesso-hover);
 }
 
-.text-uc {
-    text-transform: uppercase;
+.btn__red-btn {
+    font-size: 1.25rem;
+    font-family: var(--font-regular);
+    color: #E5F4FF;
+    background-color: #E92929;
+    padding: 8px 16px;
+    border-radius: 1rem;
+}
+.btn__red-btn:hover{
+    background-color: var(--color-atencao-hover);
 }
