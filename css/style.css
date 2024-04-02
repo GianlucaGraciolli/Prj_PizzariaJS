@@ -128,7 +128,7 @@ main {
 /*Modal Area */
 
 .bkg-modal {
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     position: fixed;
@@ -137,6 +137,14 @@ main {
     bottom: 0;
     right: 0;
     background-color: rgba(0, 0, 0, 0.6);
+}
+
+.bkg-modal--ativo {
+    display: flex;
+}
+
+.bkg-modal--cancel {
+    display: none;
 }
 
 .modal {
