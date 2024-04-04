@@ -22,19 +22,74 @@ cancelmodal.addEventListener('click', ()=> {
 
 const menos = document.querySelector('.modal__btn-remove');
 const mais = document.querySelector('.modal__btn-add');
-const valor = document.getElementById('valorao').innerHTML;
+let valor = parseFloat(document.getElementById('valorao').innerHTML);
 
 
 menos.addEventListener('click', ()=> {
-    console.log(valor);
-    if (valor == 0) {
+    if (valor == 1) {
         
     } else{
-    valor.innerHTML = valor.innerHTML - 1;
+        valor = valor - 1;
+        document.getElementById('valorao').innerHTML = valor;
+        console.log(valor);
     }
 })
 mais.addEventListener('click', ()=> {
-    console.log(valor.innerHTML);
-    valor.innerHTML = valor.innerHTML + 1;
+    valor = valor + 1;
+    document.getElementById('valorao').innerHTML = valor;
+    console.log(valor);
+})
+
+//--------------------------------------------------------------------------
+
+const modalS = document.querySelector('.modal__hover-small');
+const modalM = document.querySelector('.modal__hover-medium');
+const modalL = document.querySelector('.modal__hover-large');
+
+modalS.addEventListener('click', ()=> {
+    console.log(modalS);
+    modalS.classList.add('modal__hover--selected');
+    modalM.classList.remove('modal__hover--selected');
+    modalL.classList.remove('modal__hover--selected');
+})
+modalM.addEventListener('click', ()=> {
+    console.log(modalM);
+    modalM.classList.add('modal__hover--selected');
+    modalS.classList.remove('modal__hover--selected');
+    modalL.classList.remove('modal__hover--selected');
+})
+modalL.addEventListener('click', ()=> {
+    console.log(modalL);
+    modalL.classList.add('modal__hover--selected');
+    modalS.classList.remove('modal__hover--selected');
+    modalM.classList.remove('modal__hover--selected');
+})
+
+//--------------------------------------------------------------------------
+
+const  btnAddToKart = document.querySelector('#modal__btn-add-pizza');
+const btnCloseKart = document.querySelector('#shopcart-area-btn--close');
+function fecharModal(){
+    const modal = document.querySelector('.bkg-modal');
+    modal.classList.remove('bkg-modal--ativo');
+}
+
+function abrirCarrinho(){
+    const carrinho = document.querySelector('.shopcart-area');
+    carrinho.classList.add('shopcart-area--active');
+}
+
+function fecharCarrinho(){
+    const carrinho = document.querySelector('.shopcart-area');
+    carrinho.classList.remove('shopcart-area--active');
+}
+btnAddToKart.addEventListener('click', ()=> {
+    fecharModal();
+    abrirCarrinho();
+})
+
+btnCloseKart.addEventListener('click', ()=> {
+    fecharCarrinho();
+    console.log(btnCloseKart);
 })
 

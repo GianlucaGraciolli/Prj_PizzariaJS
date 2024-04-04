@@ -3,6 +3,7 @@ main {
     gap: 10px;
 }
 
+
 /*Geral*/
 .modal__text {
     font-size: 1rem;
@@ -43,13 +44,19 @@ main {
    font-size: 3rem;
 }
 
-.topo__Marca{
+.topo__marca{
     color: var(--color-preto);
+    display: inline-block;
+    border: 1px solid black;
 }
 
 .topo__titulo {
     color: var(--color-azul-escuro);
     padding-left: 8px;
+}
+
+.topo__cart-icon{
+    align-self: flex-end;
 }
 
 /*footer*/
@@ -182,6 +189,10 @@ main {
     overflow: hidden;
 }
 
+.modal__hover--selected{
+    background-color: grey;
+}
+
 .modal__option-area button{
     padding: 12px 16px;
 }
@@ -251,21 +262,28 @@ main {
 }
 
 /*Cart Area */
-.shopcart-area{
+.shopcart-area {
     width: 1000px;
     height: 1016px;
     border: 1px solid black;
-    display: flex;
+    display: none;
     flex-direction: column;
     padding: 16px 8px;
     background-color: var(--color-azul-claro);
     gap: 16px;
 }
 
-.shopcart-area__titletext {
+.shopcart-area--active {
+    display: flex;
+}
+
+.shopcart-area-title {
+    display: flex;
+    justify-content: space-between;
     font-size: 1.75rem;
     padding: 16px;
 }
+
 
 .shopcart-area__description {
     display: flex;
