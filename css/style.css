@@ -42,6 +42,7 @@ main {
    height: 136px;
    font-family: var(--font-bold);
    font-size: 3rem;
+   min-width: 360px;
 }
 
 .topo__marca{
@@ -354,3 +355,20 @@ main {
     background-color: var(--color-sucesso-hover);
 }
 
+@media screen and (max-width:445px) {
+    :root{
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width:856px) {
+    .footer{
+        flex-direction: column;
+        gap: 32px;
+        height: auto;
+        padding: 32px;
+    }
+    .footer__social {
+        order: -1;
+    }
+}
