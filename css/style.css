@@ -359,6 +359,13 @@ main {
     :root{
         font-size: 12px;
     }
+    .modal {
+        flex-direction: column;
+        width: auto;
+        align-items: center;
+        text-align: center;
+    }
+
 }
 
 @media screen and (max-width:856px) {
