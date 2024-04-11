@@ -1,10 +1,12 @@
 main {
     display: flex;
     gap: 10px;
+    justify-content: center;
 }
 
 
 /*Geral*/
+
 .modal__text {
     font-size: 1rem;
     font-family: var(--font-regular);
@@ -31,6 +33,10 @@ main {
 
 .totals-size {
     font-size: 1.5rem;
+}
+
+#btn__red-phone {
+    display: none;
 }
 
 /*HEADER*/
@@ -188,6 +194,7 @@ main {
     background-color: var(--color-cinza-claro);
     border-radius: 16px;
     overflow: hidden;
+    min-width: 452px;
 }
 
 .modal__hover--selected{
@@ -364,6 +371,43 @@ main {
         width: auto;
         align-items: center;
         text-align: center;
+    }
+    .zero-content{
+        font-size: 0;
+    }
+    .modal__hover-small::before {
+        content: "P";
+        font-size: 1rem;
+        font-family: var(--font-bold);
+    }
+    .modal__hover-medium::before {
+        content: "M";
+        font-size: 1rem;
+        font-family: var(--font-bold);
+    }
+    .modal__hover-large::before {
+        content: "G";
+        font-size: 1rem;
+        font-family: var(--font-bold);
+    }
+    .modal__option-area {
+        min-width: none;
+        width: 242px;
+        align-self: center;
+    }
+
+    .modal__amount-price-area {
+        flex-direction: column;
+    }
+    #btn__red-phone{
+        display: inline;
+        align-self: flex-end;
+    }
+    #btn__red-desktop{
+        display: none;  
+    }
+    .modal__btn-area{
+        justify-content: center;
     }
 
 }

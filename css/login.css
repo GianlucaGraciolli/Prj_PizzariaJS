@@ -1,0 +1,15 @@
+.forms {
+    width: 30vw;
+    background-color: bisque;
+    border: 1px solid black;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    padding: 32px 0;
+    gap: 16px;
+    align-items: center;
+}
+
+.form__element {
+    width: 250px;
+}
