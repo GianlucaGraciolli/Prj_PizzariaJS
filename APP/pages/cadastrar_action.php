@@ -9,7 +9,7 @@ $descricaoPizza = filter_input(INPUT_POST,'descricaoPizza',FILTER_SANITIZE_FULL_
 
 if ($nomePizza && $tamanhoPizza && $valorPizza) {
     
-    $sql=$pdo -> prepare ("INSERT INTO pizza (idUsuario, nomePizza, pathFoto, valor, tamanho, descricao) VALUES (:idUsuario,:nomePizza,:pathFoto,:valor,:tamanho,:descricao);");
+    $sql=$pdo -> prepare ("INSERT INTO pizza (idUsuario, nomePizza, pathFoto, valor, tamanho, descricao) VALUES (:idUsuario,:nomePizza,:pathFoto,:valorPizza,:tamanhoPizza,:descricaoPizza);");
 
     $sql->bindValue(":idUsuario", 1);
     $sql->bindValue(":nomePizza", $nomePizza);
