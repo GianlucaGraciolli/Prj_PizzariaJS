@@ -7,6 +7,11 @@ $tamanhoPizza = filter_input(INPUT_POST,'tamanhoPizza',FILTER_SANITIZE_FULL_SPEC
 $valorPizza = filter_input(INPUT_POST,'valorPizza', FILTER_VALIDATE_FLOAT);
 $descricaoPizza = filter_input(INPUT_POST,'descricaoPizza',FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 
+var_dump($nomePizza);
+var_dump($tamanhoPizza);
+var_dump($valorPizza);
+var_dump($descricaoPizza);
+
 if ($nomePizza && $tamanhoPizza && $valorPizza) {
     
     $sql=$pdo -> prepare ("INSERT INTO pizza (idUsuario, nomePizza, pathFoto, valor, tamanho, descricao) VALUES (:idUsuario,:nomePizza,:pathFoto,:valorPizza,:tamanhoPizza,:descricaoPizza);");
@@ -19,7 +24,7 @@ if ($nomePizza && $tamanhoPizza && $valorPizza) {
     $sql->bindValue(":descricaoPizza", $descricaoPizza);
     $sql->execute();
 
-    header("Location:   index.php");
+    header("Location:   ./../index.php");
     exit;
 
 } else {
