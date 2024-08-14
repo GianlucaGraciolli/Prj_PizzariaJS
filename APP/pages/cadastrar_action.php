@@ -33,7 +33,18 @@ if ($nomePizza && $tamanhoPizza && $valorPizza) {
 }
 
 
-
+// $funcao1="1.234.500";
+// $funcao1=str_replace(".","",$funcao1);
+// echo "Valor antes do floatval =>".var_dump($funcao1);
+ 
+// $funcao2="12,00";
+// $funcao2=str_replace(",",".",$funcao2);
+// echo "Valor antes do floatval =>".var_dump($funcao2);
+ 
+// $funcao1=floatval($funcao1);
+// echo "Valor depois do floatval =>".var_dump($funcao1);
+// $funcao2=floatval($funcao2);
+// echo "Valor depois do floatval =>".var_dump($funcao2);
 
 
 
