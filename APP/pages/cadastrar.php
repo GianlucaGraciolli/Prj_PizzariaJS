@@ -1,3 +1,9 @@
+<?php 
+    require './config/config.php';  
+    require './partials/header.php';
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -28,6 +34,12 @@
                 <input type="submit" value="Cadastrar">
             </div>
         </form>
+
+        <?php 
+        
+            require './partials/footer.php';
+            require './partials/modal.php ';
+        ?>
     </main>    
 </body>
 </html>

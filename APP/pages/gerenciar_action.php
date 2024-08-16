@@ -2,6 +2,15 @@
 
 require "./../config/config.php";
 
+
+if ($_POST['btn-action']==='Alterar') {
+    
+} elseif ($_POST['btn-action']==="Excluir") {
+    
+} elseif ($_POST['btn-action']==="Buscar") {
+
+}
+
 $pizzaBuscada = filter_input(INPUT_POST,'pizzaBuscada');
 
 if ($pizzaBuscada) {
