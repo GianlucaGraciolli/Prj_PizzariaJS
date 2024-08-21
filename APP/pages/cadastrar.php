@@ -1,18 +1,7 @@
-<?php 
-    require './config/config.php';  
-    require './partials/header.php';
+<?php   
+    require __DIR__ . '/partials/header.php';
 ?>
 
-
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Editar Pizza</title>
-</head>
-<body>
-    <main>
         <form action="./cadastrar_action.php" method="post">
             <div class="form-item">
                 <label for="nome-pizza">Nome da Pizza:</label>
@@ -38,8 +27,5 @@
         <?php 
         
             require './partials/footer.php';
-            require './partials/modal.php ';
+            require './partials/modal.php';
         ?>
-    </main>    
-</body>
-</html>
