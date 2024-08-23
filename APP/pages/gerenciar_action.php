@@ -75,9 +75,9 @@ if ($_POST['btn-action']==='Alterar') {
             <div class="form-item">
                 <label for="nome-pizza">Nome da Pizza:</label>
                 <input type="text" name="nomePizza" id="nome-pizza" value=<?=isset($dado['nomePizza']) ? $dado['nomePizza'] : "";?>>
-                <?php echo isset($dado['nomePizza']);?> 
+                <?php echo isset($dado['nomePizza']);?>
                 <!-- a chave do array nomePizza é o nome da coluna que veio do DB -->
-            </div>
+            </div>  
             <div class="form-item">
                 <label for="valor-pizza">Valor R$:</label>
                 <input type="text" name="valorPizza" id="valor-pizza" value=<?=isset($dado['valor']) ? $dado['valor'] : "";?>>
