@@ -1,6 +1,12 @@
 <?php
+session_start();
 require __DIR__ . "/partials/header.php";
 require __DIR__ ."/../config/config.php";
+
+if (empty($_SESSION["usuariologado"])) {
+    header( "location: login.php" );
+    exit;  
+}
  
 $sql = $pdo->query("SELECT * FROM pizza");
 $sql->execute();
@@ -9,6 +15,11 @@ if ($sql->rowCount() > 0) {
     $dados = $sql->fetchAll(PDO::FETCH_ASSOC);
 }    
 ?>
+
+<form action="./logout_action.php" method="POST" id="form-adm">
+    <label> Usuário Logado: <?php echo $_SESSION['usuarioLogado']; ?></label>
+    <input type="submit" value="Sair" class="btn btn--vermelho">
+</form>
  
 <table id="tabela-gerenciar">
     <tr>

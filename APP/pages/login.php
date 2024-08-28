@@ -1,9 +1,7 @@
 <?php
+session_start();
 require __DIR__ . "/partials/header.php";
 require __DIR__ . "/../config/config.php";
-
-
-
 
 
 
@@ -22,6 +20,8 @@ if ($login && $pwd) {
 
 
         if (password_verify($pwd, $dado['senhaUsuario'])) {
+            $_SESSION['usuarioLogado'] = $dado['nome'];
+            header("Location: gerenciaralt.php");
         } else {
             $mensagem = "usuário ou senha inválido!";
         }
